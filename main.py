@@ -796,7 +796,7 @@ def watch_lesson(lesson_id):
 
     # تم التعديل هنا لاستخدام دالة البث المباشر /stream_video
     vid_html = f'''
-    <video controls controlsList="nodownload" oncontextmenu="return false;" class="w-full rounded-3xl bg-slate-950 shadow-xl border border-slate-800 max-h-[500px]">
+        <video controls controlsList="nodownload" preload="auto" oncontextmenu="return false;" class="w-full rounded-3xl bg-slate-950 shadow-xl border border-slate-800 max-h-[500px]">
         <source src="/stream_video/{l['video_filename']}" type="video/mp4">
         متصفحك لا يدعم تشغيل الفيديو.
     </video>''' if l['video_filename'] else '<div class="p-12 text-center bg-slate-100 rounded-3xl text-xs font-bold text-slate-500">لا يوجد فيديو مرفق لهذا الدرس</div>'
